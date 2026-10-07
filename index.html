@@ -1,0 +1,2172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Kaustuv Shomy - DevOps Engineer and Linux Administrator">
+
+    <title>
+        Kaustuv Shomy | DevOps Engineer
+    </title>
+
+
+    <!-- Google Fonts -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+
+        /* ==============================
+           GLOBAL
+        ============================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+
+            font-family: "Inter", Arial, sans-serif;
+
+            background: #0a0f1c;
+
+            color: #e5e7eb;
+
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        /* ==============================
+           NAVBAR
+        ============================== */
+
+        nav {
+
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            height: 75px;
+
+            padding: 0 7%;
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            background:
+                rgba(10,15,28,.90);
+
+            backdrop-filter:
+                blur(15px);
+
+            border-bottom:
+                1px solid #1f2937;
+
+            z-index: 1000;
+        }
+
+
+        .logo {
+
+            font-size: 22px;
+
+            font-weight: 800;
+
+            color: #60a5fa;
+        }
+
+
+        .logo span {
+            color: white;
+        }
+
+
+        .nav-links {
+
+            display: flex;
+
+            gap: 28px;
+
+            list-style: none;
+        }
+
+
+        .nav-links a {
+
+            color: #cbd5e1;
+
+            font-size: 14px;
+
+            transition: .3s;
+        }
+
+
+        .nav-links a:hover {
+
+            color: #60a5fa;
+        }
+
+
+        /* ==============================
+           HERO
+        ============================== */
+
+        .hero {
+
+            min-height: 100vh;
+
+            padding:
+                140px 7%
+                80px;
+
+            display: flex;
+
+            align-items: center;
+
+            background:
+
+                radial-gradient(
+                    circle at 80% 20%,
+                    rgba(37,99,235,.25),
+                    transparent 35%
+                ),
+
+                radial-gradient(
+                    circle at 10% 80%,
+                    rgba(14,165,233,.12),
+                    transparent 30%
+                );
+        }
+
+
+        .hero-container {
+
+            max-width: 1200px;
+
+            width: 100%;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                1.2fr .8fr;
+
+            gap: 80px;
+
+            align-items: center;
+        }
+
+
+        .hero-tag {
+
+            display: inline-block;
+
+            padding:
+                7px 15px;
+
+            border-radius: 30px;
+
+            background:
+                rgba(37,99,235,.12);
+
+            border:
+                1px solid #2563eb;
+
+            color: #60a5fa;
+
+            font-size: 13px;
+
+            font-weight: 600;
+
+            margin-bottom: 20px;
+        }
+
+
+        .hero h1 {
+
+            font-size:
+                clamp(42px,6vw,72px);
+
+            line-height: 1.05;
+
+            margin-bottom: 15px;
+        }
+
+
+        .hero h1 span {
+
+            color: #60a5fa;
+        }
+
+
+        .hero-subtitle {
+
+            font-size:
+                clamp(22px,3vw,32px);
+
+            color: #94a3b8;
+
+            margin-bottom: 20px;
+        }
+
+
+        .hero-description {
+
+            max-width: 680px;
+
+            color: #94a3b8;
+
+            font-size: 16px;
+
+            margin-bottom: 30px;
+        }
+
+
+        /* ==============================
+           HERO BUTTONS
+        ============================== */
+
+        .hero-buttons {
+
+            display: flex;
+
+            gap: 12px;
+
+            flex-wrap: wrap;
+        }
+
+
+        .btn {
+
+            padding:
+                13px 22px;
+
+            border-radius: 9px;
+
+            font-weight: 600;
+
+            transition: .3s;
+        }
+
+
+        .btn-primary {
+
+            background: #2563eb;
+
+            color: white;
+        }
+
+
+        .btn-primary:hover {
+
+            background: #1d4ed8;
+
+            transform:
+                translateY(-3px);
+        }
+
+
+        .btn-outline {
+
+            border:
+                1px solid #334155;
+
+            color: #cbd5e1;
+        }
+
+
+        .btn-outline:hover {
+
+            border-color: #60a5fa;
+
+            color: #60a5fa;
+        }
+
+
+        /* ==============================
+           PROFILE IMAGE
+        ============================== */
+
+        .profile-container {
+
+            display: flex;
+
+            justify-content: center;
+
+            position: relative;
+        }
+
+
+        .profile-container::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 330px;
+
+            height: 330px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(37,99,235,.20);
+
+            filter:
+                blur(50px);
+        }
+
+
+        .profile-image {
+
+            position: relative;
+
+            width: 320px;
+
+            height: 380px;
+
+            object-fit: cover;
+
+            border-radius: 25px;
+
+            border:
+                2px solid #334155;
+
+            box-shadow:
+                0 30px 80px
+                rgba(0,0,0,.5);
+        }
+
+
+        /* ==============================
+           SECTION
+        ============================== */
+
+        section {
+
+            padding:
+                100px 7%;
+        }
+
+
+        .section-container {
+
+            max-width: 1200px;
+
+            margin: auto;
+        }
+
+
+        .section-heading {
+
+            margin-bottom: 50px;
+        }
+
+
+        .section-heading span {
+
+            color: #60a5fa;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            letter-spacing: 2px;
+        }
+
+
+        .section-heading h2 {
+
+            font-size:
+                clamp(32px,5vw,48px);
+
+            margin-top: 8px;
+        }
+
+
+        .section-heading p {
+
+            color: #64748b;
+
+            max-width: 650px;
+
+            margin-top: 10px;
+        }
+
+
+        /* ==============================
+           ABOUT
+        ============================== */
+
+        .about {
+
+            background: #0d1422;
+        }
+
+
+        .about-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 50px;
+
+            align-items: center;
+        }
+
+
+        .about-image {
+
+            width: 100%;
+
+            height: 400px;
+
+            object-fit: cover;
+
+            border-radius: 20px;
+
+            border:
+                1px solid #1e293b;
+        }
+
+
+        .about-text h3 {
+
+            font-size: 28px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .about-text p {
+
+            color: #94a3b8;
+
+            margin-bottom: 18px;
+        }
+
+
+        /* ==============================
+           STATS
+        ============================== */
+
+        .stats {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 15px;
+
+            margin-top: 30px;
+        }
+
+
+        .stat {
+
+            padding: 20px;
+
+            background: #111827;
+
+            border:
+                1px solid #1f2937;
+
+            border-radius: 12px;
+
+            text-align: center;
+        }
+
+
+        .stat strong {
+
+            display: block;
+
+            font-size: 28px;
+
+            color: #60a5fa;
+        }
+
+
+        .stat span {
+
+            color: #94a3b8;
+
+            font-size: 13px;
+        }
+
+
+        /* ==============================
+           SKILLS
+        ============================== */
+
+        .skills-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 20px;
+        }
+
+
+        .skill-card {
+
+            padding: 25px;
+
+            background: #111827;
+
+            border:
+                1px solid #1f2937;
+
+            border-radius: 15px;
+
+            transition: .3s;
+        }
+
+
+        .skill-card:hover {
+
+            transform:
+                translateY(-7px);
+
+            border-color:
+                #2563eb;
+        }
+
+
+        .skill-icon {
+
+            font-size: 32px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .skill-card h3 {
+
+            margin-bottom: 10px;
+        }
+
+
+        .skill-card p {
+
+            color: #94a3b8;
+
+            font-size: 14px;
+        }
+
+
+        .skill-tags {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 7px;
+
+            margin-top: 15px;
+        }
+
+
+        .skill-tags span {
+
+            padding:
+                5px 9px;
+
+            background: #1e293b;
+
+            border-radius: 5px;
+
+            color: #93c5fd;
+
+            font-size: 11px;
+        }
+
+
+        /* ==============================
+           EXPERIENCE
+        ============================== */
+
+        .experience {
+
+            background: #0d1422;
+        }
+
+
+        .timeline {
+
+            max-width: 900px;
+
+            margin: auto;
+
+            border-left:
+                2px solid #2563eb;
+
+            padding-left: 35px;
+        }
+
+
+        .timeline-item {
+
+            position: relative;
+
+            margin-bottom: 45px;
+        }
+
+
+        .timeline-item::before {
+
+            content: "";
+
+            position: absolute;
+
+            width: 13px;
+
+            height: 13px;
+
+            border-radius: 50%;
+
+            background: #2563eb;
+
+            left: -43px;
+
+            top: 6px;
+
+            box-shadow:
+                0 0 0 5px #0d1422;
+        }
+
+
+        .timeline-date {
+
+            color: #60a5fa;
+
+            font-size: 13px;
+
+            font-weight: 700;
+
+            margin-bottom: 5px;
+        }
+
+
+        .timeline-item h3 {
+
+            font-size: 23px;
+
+            margin-bottom: 5px;
+        }
+
+
+        .timeline-item h4 {
+
+            color: #94a3b8;
+
+            font-weight: 500;
+
+            margin-bottom: 12px;
+        }
+
+
+        .timeline-item p {
+
+            color: #94a3b8;
+
+            font-size: 14px;
+        }
+
+
+        /* ==============================
+           PROJECTS
+        ============================== */
+
+        .projects-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2,1fr);
+
+            gap: 25px;
+        }
+
+
+        .project {
+
+            background: #111827;
+
+            border:
+                1px solid #1f2937;
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            transition: .3s;
+        }
+
+
+        .project:hover {
+
+            transform:
+                translateY(-8px);
+
+            border-color:
+                #2563eb;
+        }
+
+
+        .project img {
+
+            width: 100%;
+
+            height: 220px;
+
+            object-fit: cover;
+        }
+
+
+        .project-content {
+
+            padding: 25px;
+        }
+
+
+        .project-content h3 {
+
+            margin-bottom: 10px;
+        }
+
+
+        .project-content p {
+
+            color: #94a3b8;
+
+            font-size: 14px;
+
+            margin-bottom: 15px;
+        }
+
+
+        /* ==============================
+           CERTIFICATIONS
+        ============================== */
+
+        .certifications {
+
+            background: #0d1422;
+        }
+
+
+        .cert-grid {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3,1fr);
+
+            gap: 20px;
+        }
+
+
+        .certificate {
+
+            padding: 25px;
+
+            background: #111827;
+
+            border:
+                1px solid #1f2937;
+
+            border-radius: 15px;
+
+            text-align: center;
+        }
+
+
+        .certificate-icon {
+
+            font-size: 40px;
+
+            margin-bottom: 12px;
+        }
+
+
+        .certificate h3 {
+
+            font-size: 17px;
+
+            margin-bottom: 7px;
+        }
+
+
+        .certificate p {
+
+            color: #64748b;
+
+            font-size: 13px;
+        }
+
+
+        /* ==============================
+           EDUCATION
+        ============================== */
+
+        .education-card {
+
+            max-width: 800px;
+
+            margin: auto;
+
+            padding: 35px;
+
+            background: #111827;
+
+            border:
+                1px solid #1f2937;
+
+            border-radius: 18px;
+
+            text-align: center;
+        }
+
+
+        .education-icon {
+
+            font-size: 45px;
+
+            margin-bottom: 15px;
+        }
+
+
+        .education-card h3 {
+
+            font-size: 25px;
+
+            margin-bottom: 8px;
+        }
+
+
+        .education-card p {
+
+            color: #94a3b8;
+        }
+
+
+        /* ==============================
+           CONTACT
+        ============================== */
+
+        .contact {
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #172554,
+                    #0f172a
+                );
+
+            text-align: center;
+        }
+
+
+        .contact-content {
+
+            max-width: 750px;
+
+            margin: auto;
+        }
+
+
+        .contact h2 {
+
+            font-size:
+                clamp(35px,5vw,50px);
+
+            margin-bottom: 12px;
+        }
+
+
+        .contact p {
+
+            color: #94a3b8;
+
+            margin-bottom: 30px;
+        }
+
+
+        .contact-buttons {
+
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 12px;
+        }
+
+
+        /* ==============================
+           FOOTER
+        ============================== */
+
+        footer {
+
+            padding: 25px;
+
+            text-align: center;
+
+            background: #050912;
+
+            color: #64748b;
+
+            font-size: 13px;
+        }
+
+
+        /* ==============================
+           MOBILE
+        ============================== */
+
+        @media(max-width:850px) {
+
+            .nav-links {
+                display: none;
+            }
+
+
+            .hero {
+
+                padding:
+                    120px 5%
+                    70px;
+            }
+
+
+            .hero-container {
+
+                grid-template-columns:
+                    1fr;
+
+                text-align: center;
+            }
+
+
+            .hero-description {
+
+                margin:
+                    0 auto 30px;
+            }
+
+
+            .hero-buttons {
+
+                justify-content: center;
+            }
+
+
+            .profile-image {
+
+                width: 280px;
+
+                height: 330px;
+            }
+
+
+            .about-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .skills-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .projects-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .cert-grid {
+
+                grid-template-columns:
+                    1fr;
+            }
+        }
+
+
+        @media(max-width:500px) {
+
+            section {
+
+                padding:
+                    75px 5%;
+            }
+
+
+            .stats {
+
+                grid-template-columns:
+                    1fr;
+            }
+
+
+            .hero-buttons {
+
+                flex-direction:
+                    column;
+            }
+
+
+            .btn {
+
+                display: block;
+
+                width: 100%;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+     NAVIGATION
+================================================== -->
+
+<nav>
+
+    <a href="#home" class="logo">
+
+        <span>KS</span>
+        <span>Kaustuv Shomy</span>
+
+    </a>
+
+
+    <ul class="nav-links">
+
+        <li>
+            <a href="#about">About</a>
+        </li>
+
+        <li>
+            <a href="#skills">Skills</a>
+        </li>
+
+        <li>
+            <a href="#experience">Experience</a>
+        </li>
+
+        <li>
+            <a href="#projects">Projects</a>
+        </li>
+
+        <li>
+            <a href="#certifications">Certifications</a>
+        </li>
+
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+
+<!-- ==================================================
+     HERO
+================================================== -->
+
+<section class="hero" id="home">
+
+    <div class="hero-container">
+
+
+        <div>
+
+            <div class="hero-tag">
+
+                DEVOPS ENGINEER • LINUX • CLOUD
+
+            </div>
+
+
+            <h1>
+
+                Hi, I'm
+                <span>
+                    Kaustuv
+                </span>
+
+            </h1>
+
+
+            <div class="hero-subtitle">
+
+                DevOps Engineer & Linux Administrator
+
+            </div>
+
+
+            <p class="hero-description">
+
+                IT professional with 7 years of experience,
+                including 6 years of Linux administration and
+                1 year of testing automation experience.
+                Experienced in cloud infrastructure,
+                CI/CD, automation, containers,
+                Kubernetes and enterprise IT environments.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#projects"
+                    class="btn btn-primary"
+                >
+                    View My Work
+                </a>
+
+
+                <a
+                    href="#contact"
+                    class="btn btn-outline"
+                >
+                    Contact Me
+                </a>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PROFILE IMAGE -->
+
+        <div class="profile-container">
+
+            <!-- Replace this image with your own photo -->
+
+            <img
+                class="profile-image"
+                src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=700&q=80"
+                alt="Kaustuv Shomy"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     ABOUT
+================================================== -->
+
+<section class="about" id="about">
+
+    <div class="section-container">
+
+        <div class="section-heading">
+
+            <span>
+                ABOUT ME
+            </span>
+
+            <h2>
+                Professional Profile
+            </h2>
+
+        </div>
+
+
+        <div class="about-grid">
+
+
+            <div>
+
+                <img
+                    class="about-image"
+                    src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1000&q=80"
+                    alt="Professional IT environment"
+                >
+
+            </div>
+
+
+            <div class="about-text">
+
+                <h3>
+                    Building reliable technology solutions
+                </h3>
+
+
+                <p>
+
+                    I am an IT professional with approximately
+                    7 years of experience in enterprise technology
+                    environments.
+
+                </p>
+
+
+                <p>
+
+                    My professional background includes around
+                    6 years of Linux administration and experience
+                    in testing automation using Python.
+
+                </p>
+
+
+                <p>
+
+                    I have worked with technologies including
+                    Linux, AWS, Azure, Docker, Kubernetes,
+                    Terraform, Jenkins, Git, GitHub and
+                    ServiceNow.
+
+                </p>
+
+
+                <p>
+
+                    I am currently focusing on strengthening my
+                    DevOps, cloud infrastructure, automation and
+                    container orchestration skills.
+
+                </p>
+
+
+                <div class="stats">
+
+                    <div class="stat">
+
+                        <strong>
+                            7+
+                        </strong>
+
+                        <span>
+                            Years Experience
+                        </span>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <strong>
+                            6+
+                        </strong>
+
+                        <span>
+                            Years Linux
+                        </span>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <strong>
+                            1+
+                        </strong>
+
+                        <span>
+                            Year Automation
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     SKILLS
+================================================== -->
+
+<section id="skills">
+
+    <div class="section-container">
+
+
+        <div class="section-heading">
+
+            <span>
+                TECHNICAL SKILLS
+            </span>
+
+            <h2>
+                Technologies I Work With
+            </h2>
+
+        </div>
+
+
+        <div class="skills-grid">
+
+
+            <!-- LINUX -->
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    🐧
+                </div>
+
+                <h3>
+                    Linux Administration
+                </h3>
+
+                <p>
+                    Enterprise Linux administration,
+                    troubleshooting, patching,
+                    monitoring and server management.
+                </p>
+
+                <div class="skill-tags">
+
+                    <span>Linux</span>
+                    <span>Bash</span>
+                    <span>SSH</span>
+                    <span>Cron</span>
+                    <span>Putty</span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- AWS -->
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    ☁️
+                </div>
+
+                <h3>
+                    AWS Cloud
+                </h3>
+
+                <p>
+                    Cloud infrastructure and AWS services
+                    used for scalable and reliable
+                    enterprise environments.
+                </p>
+
+                <div class="skill-tags">
+
+                    <span>EC2</span>
+                    <span>VPC</span>
+                    <span>IAM</span>
+                    <span>CloudWatch</span>
+                    <span>Lambda</span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DEVOPS -->
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    ⚙️
+                </div>
+
+                <h3>
+                    DevOps & CI/CD
+                </h3>
+
+                <p>
+                    Automation and continuous integration
+                    and deployment workflows.
+                </p>
+
+                <div class="skill-tags">
+
+                    <span>Jenkins</span>
+                    <span>GitHub</span>
+                    <span>Git</span>
+                    <span>CI/CD</span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CONTAINERS -->
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    🐳
+                </div>
+
+                <h3>
+                    Containers
+                </h3>
+
+                <p>
+                    Containerization and orchestration
+                    technologies for modern applications.
+                </p>
+
+                <div class="skill-tags">
+
+                    <span>Docker</span>
+                    <span>Kubernetes</span>
+                    <span>EKS</span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- TERRAFORM -->
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    🏗️
+                </div>
+
+                <h3>
+                    Infrastructure as Code
+                </h3>
+
+                <p>
+                    Infrastructure provisioning and
+                    automation using Infrastructure
+                    as Code practices.
+                </p>
+
+                <div class="skill-tags">
+
+                    <span>Terraform</span>
+                    <span>CloudFormation</span>
+                    <span>IaC</span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PYTHON -->
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    🐍
+                </div>
+
+                <h3>
+                    Automation
+                </h3>
+
+                <p>
+                    Python scripting and automation
+                    for testing and operational tasks.
+                </p>
+
+                <div class="skill-tags">
+
+                    <span>Python</span>
+                    <span>Automation</span>
+                    <span>Testing</span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     EXPERIENCE
+================================================== -->
+
+<section class="experience" id="experience">
+
+    <div class="section-container">
+
+
+        <div class="section-heading">
+
+            <span>
+                CAREER
+            </span>
+
+            <h2>
+                Professional Experience
+            </h2>
+
+        </div>
+
+
+        <div class="timeline">
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-date">
+                    Present
+                </div>
+
+                <h3>
+                    DevOps / Linux Professional
+                </h3>
+
+                <h4>
+                    IBM
+                </h4>
+
+                <p>
+
+                    Working in enterprise IT environments with
+                    experience across Linux administration,
+                    infrastructure operations, automation,
+                    vulnerability management and DevOps
+                    technologies.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-date">
+                    Previous Project
+                </div>
+
+                <h3>
+                    Linux Administrator
+                </h3>
+
+                <h4>
+                    Enterprise Infrastructure
+                </h4>
+
+                <p>
+
+                    Managed Linux servers, performed health
+                    checks, patching activities, space
+                    management, troubleshooting, monitoring,
+                    scheduled jobs and operational support.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-date">
+                    Previous Project
+                </div>
+
+                <h3>
+                    Testing Automation
+                </h3>
+
+                <h4>
+                    Python Automation
+                </h4>
+
+                <p>
+
+                    Worked with Python-based testing automation
+                    and supported automated testing activities
+                    in an enterprise project environment.
+
+                </p>
+
+            </div>
+
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-date">
+                    Enterprise Projects
+                </div>
+
+                <h3>
+                    Vulnerability Management
+                </h3>
+
+                <h4>
+                    Bank of America Account
+                </h4>
+
+                <p>
+
+                    Worked on vulnerability management activities
+                    and infrastructure-related operational tasks
+                    in an enterprise banking environment.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     PROJECTS
+================================================== -->
+
+<section id="projects">
+
+    <div class="section-container">
+
+
+        <div class="section-heading">
+
+            <span>
+                PROJECTS
+            </span>
+
+            <h2>
+                Featured Work
+            </h2>
+
+            <p>
+                Some of the technologies and solutions
+                I have worked with or practiced.
+            </p>
+
+        </div>
+
+
+        <div class="projects-grid">
+
+
+            <!-- PROJECT 1 -->
+
+            <div class="project">
+
+                <img
+                    src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=1000&q=80"
+                    alt="Cloud infrastructure"
+                >
+
+                <div class="project-content">
+
+                    <h3>
+                        AWS Infrastructure Automation
+                    </h3>
+
+                    <p>
+
+                        Infrastructure provisioning using
+                        Terraform with AWS resources such
+                        as EC2 and networking components.
+
+                    </p>
+
+                    <div class="skill-tags">
+
+                        <span>AWS</span>
+                        <span>Terraform</span>
+                        <span>EC2</span>
+                        <span>VPC</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROJECT 2 -->
+
+            <div class="project">
+
+                <img
+                    src="https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?auto=format&fit=crop&w=1000&q=80"
+                    alt="DevOps Kubernetes"
+                >
+
+                <div class="project-content">
+
+                    <h3>
+                        CI/CD Pipeline
+                    </h3>
+
+                    <p>
+
+                        Automated build and deployment
+                        workflow using Git, Jenkins,
+                        Docker and cloud infrastructure.
+
+                    </p>
+
+                    <div class="skill-tags">
+
+                        <span>Jenkins</span>
+                        <span>GitHub</span>
+                        <span>Docker</span>
+                        <span>CI/CD</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROJECT 3 -->
+
+            <div class="project">
+
+                <img
+                    src="https://images.unsplash.com/photo-1605745341112-85968b19335b?auto=format&fit=crop&w=1000&q=80"
+                    alt="Docker containers"
+                >
+
+                <div class="project-content">
+
+                    <h3>
+                        Containerized Application
+                    </h3>
+
+                    <p>
+
+                        Containerized application deployment
+                        using Docker and explored orchestration
+                        using Kubernetes.
+
+                    </p>
+
+                    <div class="skill-tags">
+
+                        <span>Docker</span>
+                        <span>Kubernetes</span>
+                        <span>EKS</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- PROJECT 4 -->
+
+            <div class="project">
+
+                <img
+                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80"
+                    alt="Monitoring dashboard"
+                >
+
+                <div class="project-content">
+
+                    <h3>
+                        Infrastructure Monitoring
+                    </h3>
+
+                    <p>
+
+                        Monitoring and observability concepts
+                        using CloudWatch, Prometheus,
+                        Grafana and logging platforms.
+
+                    </p>
+
+                    <div class="skill-tags">
+
+                        <span>CloudWatch</span>
+                        <span>Prometheus</span>
+                        <span>Grafana</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     CERTIFICATIONS
+================================================== -->
+
+<section class="certifications"
+         id="certifications">
+
+    <div class="section-container">
+
+
+        <div class="section-heading">
+
+            <span>
+                CERTIFICATIONS & LEARNING
+            </span>
+
+            <h2>
+                Continuous Learning
+            </h2>
+
+        </div>
+
+
+        <div class="cert-grid">
+
+
+            <div class="certificate">
+
+                <div class="certificate-icon">
+                    ☁️
+                </div>
+
+                <h3>
+                    AWS Cloud
+                </h3>
+
+                <p>
+                    Cloud infrastructure and
+                    AWS services learning
+                </p>
+
+            </div>
+
+
+            <div class="certificate">
+
+                <div class="certificate-icon">
+                    🤖
+                </div>
+
+                <h3>
+                    Generative AI
+                </h3>
+
+                <p>
+                    Generative and Agentic AI
+                    learning and certification
+                </p>
+
+            </div>
+
+
+            <div class="certificate">
+
+                <div class="certificate-icon">
+                    🧠
+                </div>
+
+                <h3>
+                    Azure
+                </h3>
+
+                <p>
+                    Microsoft Azure cloud and
+                    machine learning technologies
+                </p>
+
+            </div>
+
+
+            <div class="certificate">
+
+                <div class="certificate-icon">
+                    🔧
+                </div>
+
+                <h3>
+                    DevOps Training
+                </h3>
+
+                <p>
+                    GitHub, Docker, Kubernetes
+                    and Terraform
+                </p>
+
+            </div>
+
+
+            <div class="certificate">
+
+                <div class="certificate-icon">
+                    🐍
+                </div>
+
+                <h3>
+                    Python
+                </h3>
+
+                <p>
+                    Python programming and
+                    testing automation
+                </p>
+
+            </div>
+
+
+            <div class="certificate">
+
+                <div class="certificate-icon">
+                    📊
+                </div>
+
+                <h3>
+                    DP-203
+                </h3>
+
+                <p>
+                    Microsoft Azure Data Engineering
+                    certification
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     EDUCATION
+================================================== -->
+
+<section>
+
+    <div class="section-container">
+
+
+        <div class="section-heading">
+
+            <span>
+                EDUCATION
+            </span>
+
+            <h2>
+                Academic Background
+            </h2>
+
+        </div>
+
+
+        <div class="education-card">
+
+            <div class="education-icon">
+                🎓
+            </div>
+
+
+            <h3>
+                Bachelor's Degree
+            </h3>
+
+
+            <p>
+                Graduated in 2019
+            </p>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     CONTACT
+================================================== -->
+
+<section class="contact"
+         id="contact">
+
+    <div class="contact-content">
+
+
+        <div class="section-heading">
+
+            <span>
+                GET IN TOUCH
+            </span>
+
+            <h2>
+                Let's Connect
+            </h2>
+
+        </div>
+
+
+        <p>
+
+            Interested in DevOps, Cloud, Linux,
+            Automation or technology?
+            Let's connect and build something great.
+
+        </p>
+
+
+        <div class="contact-buttons">
+
+
+            <a
+                href="mailto:kaustuvshomy@gmail.com"
+                class="btn btn-primary"
+            >
+
+                📧 Email Me
+
+            </a>
+
+
+            <a
+                href="https://www.linkedin.com/"
+                target="_blank"
+                class="btn btn-outline"
+            >
+
+                💼 LinkedIn
+
+            </a>
+
+
+            <a
+                href="https://github.com/"
+                target="_blank"
+                class="btn btn-outline"
+            >
+
+                💻 GitHub
+
+            </a>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
+<footer>
+
+    © 2026 Kaustuv Shomy.
+    All Rights Reserved.
+
+</footer>
+
+
+</body>
+
+</html>
